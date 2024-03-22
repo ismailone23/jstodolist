@@ -130,7 +130,7 @@ document.cookie = `${encodeURIComponent(key)}=${encodeURIComponent(value)}`;
 document.cookie = "name2=none";
 console.log(document.cookie);
 */
-
+// ./
 /*
 let a = async () => {
   return new Promise((resolve, reject) => {
