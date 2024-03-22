@@ -4,3 +4,91 @@
   box-sizing: border-box;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
+:root {
+  --cursortype: pointer;
+}
+@media screen and (max-width: 950px) {
+  :root {
+    --cursortype: default;
+  }
+}
+.rootcontainer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.container {
+  max-width: 1000px;
+  width: 100%;
+  padding: 0.5rem 1rem;
+}
+.border-b {
+  border-bottom: 1px dotted rgb(216, 216, 216);
+}
+.flex-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.justify-center {
+  display: flex;
+  justify-content: center;
+}
+.left a {
+  font-size: 1.5rem;
+  cursor: var(--cursortype);
+  text-decoration: none;
+  color: black;
+}
+.right {
+  gap: 1rem;
+  display: flex;
+}
+.right a {
+  cursor: var(--cursortype);
+  text-decoration: none;
+  color: black;
+  text-transform: capitalize;
+  font-size: 1.1rem;
+}
+.inputs {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+  align-items: end;
+  gap: 1rem;
+}
+.inputs div {
+  gap: 0.5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+label {
+  font-size: 1.1rem;
+}
+#title,
+#description {
+  outline: none;
+  border: 1px solid;
+  padding: 0.5rem;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  resize: none;
+}
+#description {
+  height: 7rem;
+}
+button {
+  width: 8rem;
+  float: right;
+  padding: 0.5rem 1rem;
+  cursor: var(--cursortype);
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background: rgb(29, 157, 255);
+  font-size: 1.2rem;
+  color: #fff;
+}

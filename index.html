@@ -8,6 +8,35 @@
     <title>📝 Todo List</title>
   </head>
   <body>
-    <h1>Hello world</h1>
+    <nav class="rootcontainer border-b">
+      <div class="container flex-nav">
+        <div class="left">
+          <a href="#">📝 Todo</a>
+        </div>
+        <div class="right">
+          <a href="#">about</a>
+          <a href="#">more</a>
+        </div>
+      </div>
+    </nav>
+    <div class="rootcontainer">
+      <div class="container justify-center">
+        <form class="inputs">
+          <div>
+            <label for="title">Title</label>
+            <input required type="text" name="title" id="title" />
+          </div>
+          <div>
+            <label for="description">Description</label>
+            <textarea
+              type="text"
+              name="description"
+              id="description"
+            ></textarea>
+          </div>
+          <button>Add +</button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
