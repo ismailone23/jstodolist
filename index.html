@@ -24,7 +24,18 @@
         <form class="inputs">
           <div>
             <label for="title">Title</label>
-            <input required type="text" name="title" id="title" />
+            <input
+              maxlength="50"
+              required
+              placeholder="Title"
+              type="text"
+              name="title"
+              id="title"
+            />
+          </div>
+          <div>
+            <label for="deadline">Deadline</label>
+            <input required type="date" name="deadline" id="deadline" />
           </div>
           <div>
             <label for="description">Description</label>
@@ -32,10 +43,64 @@
               type="text"
               name="description"
               id="description"
+              minlength="50"
+              maxlength="200"
             ></textarea>
+            <span id="wordcount">0/200</span>
           </div>
           <button>Add +</button>
         </form>
+      </div>
+    </div>
+    <div class="rootcontainer">
+      <div class="container border-b cards">
+        <h1>Todos</h1>
+      </div>
+    </div>
+    <div class="rootcontainer">
+      <div class="container cards">
+        <div class="card">
+          <div class="title">
+            <h1>Lorem ipsum dolor sit amet.</h1>
+            <p>issued - 12 oct 2024</p>
+            <p>Deadline - 25 oct 2024</p>
+          </div>
+          <div class="more">
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi
+              exercitationem aspernatur, a esse officiis reiciendis repellendus,
+              autem cumque consectetur, recusandae nulla vel sed. Quis
+              cupiditate est deleniti enim doloribus veritatis, molestiae ex
+              libero ipsa illum illo. Minus delectus exercitationem iure,
+              excepturi dolore officia. Pariatur autem est quaerat nihil
+              voluptatibus sit!
+            </p>
+          </div>
+          <div class="action-btn">
+            <button id="edit">Edit ✏️</button>
+            <button id="complete">complete ✅</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      style="align-items: center; margin-bottom: 2rem; flex-direction: column"
+      class="rootcontainer justify-center"
+    >
+      <div class="container cards">
+        <h1>Completed</h1>
+      </div>
+      <div class="container cards">
+        <div class="card">
+          <div class="title">
+            <h1 class="done">Lorem ipsum dolor sit amet.</h1>
+            <p>completed - 12 oct 2024</p>
+          </div>
+          <div class="action-btn">
+            <button id="delete">Delete 🗑️</button>
+            <button id="return">Return ↩️</button>
+          </div>
+        </div>
       </div>
     </div>
   </body>
