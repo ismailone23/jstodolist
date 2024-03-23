@@ -106,7 +106,7 @@ label {
   color: var(--themeColor);
 }
 .cards {
-  justify-content: space-between;
+  /* justify-content: space-between; */
   gap: 1rem;
   display: flex;
   flex-wrap: wrap;
@@ -163,11 +163,11 @@ label {
 .done {
   text-decoration: line-through;
 }
-#complete {
+.complete {
   color: #fff;
   background: #04863c;
 }
-#delete {
+.delete {
   color: #fff;
   background: #eb0c0c;
 }

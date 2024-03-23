@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <script defer src="script.js"></script>
     <title>📝 Todo List</title>
   </head>
   <body>
@@ -21,16 +20,15 @@
     </nav>
     <div class="rootcontainer">
       <div class="container justify-center">
-        <form class="inputs">
+        <form id="form" class="inputs">
           <div>
             <label for="title">Title</label>
             <input
-              maxlength="50"
+              id="title"
+              type="text"
+              maxlength="45"
               required
               placeholder="Title"
-              type="text"
-              name="title"
-              id="title"
             />
           </div>
           <div>
@@ -38,17 +36,22 @@
             <input required type="date" name="deadline" id="deadline" />
           </div>
           <div>
-            <label for="description">Description</label>
+            <label for="description"
+              >Description
+              <span style="font-size: 0.8rem; color: gray"
+                >(<span id="wordcount">0</span>/350)</span
+              ></label
+            >
             <textarea
               type="text"
+              required
               name="description"
               id="description"
               minlength="50"
-              maxlength="200"
+              maxlength="350"
             ></textarea>
-            <span id="wordcount">0/200</span>
           </div>
-          <button>Add +</button>
+          <button id="formbtn" type="submit">Add +</button>
         </form>
       </div>
     </div>
@@ -58,50 +61,18 @@
       </div>
     </div>
     <div class="rootcontainer">
-      <div class="container cards">
-        <div class="card">
-          <div class="title">
-            <h1>Lorem ipsum dolor sit amet.</h1>
-            <p>issued - 12 oct 2024</p>
-            <p>Deadline - 25 oct 2024</p>
-          </div>
-          <div class="more">
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi
-              exercitationem aspernatur, a esse officiis reiciendis repellendus,
-              autem cumque consectetur, recusandae nulla vel sed. Quis
-              cupiditate est deleniti enim doloribus veritatis, molestiae ex
-              libero ipsa illum illo. Minus delectus exercitationem iure,
-              excepturi dolore officia. Pariatur autem est quaerat nihil
-              voluptatibus sit!
-            </p>
-          </div>
-          <div class="action-btn">
-            <button id="edit">Edit ✏️</button>
-            <button id="complete">complete ✅</button>
-          </div>
-        </div>
-      </div>
+      <div class="container cards" id="noncompleted"></div>
     </div>
     <div
       style="align-items: center; margin-bottom: 2rem; flex-direction: column"
       class="rootcontainer justify-center"
     >
-      <div class="container cards">
+      <div class="container">
         <h1>Completed</h1>
       </div>
-      <div class="container cards">
-        <div class="card">
-          <div class="title">
-            <h1 class="done">Lorem ipsum dolor sit amet.</h1>
-            <p>completed - 12 oct 2024</p>
-          </div>
-          <div class="action-btn">
-            <button id="delete">Delete 🗑️</button>
-            <button id="return">Return ↩️</button>
-          </div>
-        </div>
-      </div>
+      <div class="container cards" id="completed"></div>
     </div>
+    <script src="script.js"></script>
+    <script src="functions.js"></script>
   </body>
 </html>
